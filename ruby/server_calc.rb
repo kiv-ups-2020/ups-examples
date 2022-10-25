@@ -20,8 +20,8 @@ ops= %w[ plus minus division multiply ]
 
 loop do
    Thread.start(server.accept) do |client|
-     client.puts("Calculator")
-     client.puts("Meesage formet: 'operation|operand|operand'")
+     client.puts("Calculator server 0.1")
+     client.puts("Message format: 'operation|operand|operand'")
      client.puts("Opertion: #{ops}")
      line = client.gets
      oper, o1, o2 = line.split('|')
